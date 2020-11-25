@@ -38,8 +38,6 @@
 #' accuracy(imputed_airpass2,AirPassengers)
 
 #' @references Sowmya Chandrasekaran, Martin Zaefferer, Steffen Moritz, Jörg Stork, Martina Friese, Andreas Fischbach, Thomas Bartz-Beielstein (2016). "Data Preprocessing: A New Algorithm for Univariate Imputation Designed Specifically for Industrial Needs". 
-#' @import stats, forecast,imputeTS 
-
 #' @export
 
 na.smwa<- function(x, motifSize = 1, minGap = 1, observationWindow = 10,option = "both") {
