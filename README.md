@@ -34,7 +34,7 @@ The combination of head, missing data, and tail forms the window. This window th
 ## Usage
 na.smwa(x, motifSize = 1, minGap = 1, observationWindow = 10, option = "both")
 
-Arguments
+Where, 
 x-	Numeric Vector (vector) or Time Series (ts) object in which missing values shall be replaced
 
 motifSize	-integer value that specifies the size of dataset for "head" and "tail"
@@ -45,7 +45,7 @@ observationWindow	-integer value that specifies the maximum length of past windo
 
 option	-accepts string head, tail, both. The user can choose if they want to frame the window only with "head" or "tail" or using "both." Recommended is to use "both" for better performance
 ## Example
-´´´R
+```R
 library(imputeTS)
 library(forecast)
 #Example 1:# Prerequisite: Create Time series with missing values
@@ -59,7 +59,7 @@ imputed_airpass1<-na.smwa(data)
 accuracy(imputed_airpass1,AirPassengers)
 imputed_airpass2<-na.smwa(data,motifSize=2,observationWindow = 60)
 accuracy(imputed_airpass2,AirPassengers)
-´´´
+```
 ## References
 Sowmya Chandrasekaran, Martin Zaefferer, Steffen Moritz, Jörg Stork, Martina Friese, Andreas Fischbach, Thomas Bartz-Beielstein (2016). "Data Preprocessing: A New Algorithm for Univariate Imputation Designed Specifically for Industrial Needs".
 
